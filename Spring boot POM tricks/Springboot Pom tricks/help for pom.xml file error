@@ -26,16 +26,9 @@ for resolving this issue you have to either of the followings
            .
        </parent>
        
-**************************************************************************************************************
-
-2 --> either we may have obsolute m2e eclipse plugin , so in their latest version they have solved this issue,
-   so we can check and update the M2E(Maven to Eclipse) plugin version by going to installing new software
-      help --> install new software --> what is already installed --> and search for " M2e ".
-   selecting that one and updating that version also solve this problem.
-   
 *****************************************************************************************************************
 
-3 --> also we can solve this problem by following manner as well
+2 --> also we can solve this problem by following manner as well
  go to <properties> tag and there already java version will be mentioned just after that write
  
  <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
