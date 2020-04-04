@@ -1,0 +1,28 @@
+/* for normal http call in java version greater than or equal to 11, there is one separate and class called HttpClient is there form oracle
+that helps us to connect and call the http request directly from out java code.*/
+
+example :
+  
+  HttpRequest request = HttpRequest.newBuilder()
+                .GET()
+                .uri(URI.create("https://httpbin.org/get"))
+                .setHeader("User-Agent", "Java 11 HttpClient Bot")
+                .build();
+
+        HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+
+
+/* but for java 8 , there is no way we can use use HttpClient directly
+so for that we have to use Apache HttpClient and we will be able to call. */
+
+eaxmple : 
+
+    HttpGet request = new HttpGet(url);
+		String file=null;
+		HttpResponse response=null;
+		
+		response = httpClient.execute(request);
+		System.out.println("status code is :"+response.getStatusLine().getStatusCode());
+		HttpEntity entity = response.getEntity();
+		file = EntityUtils.toString(entity);
+		
