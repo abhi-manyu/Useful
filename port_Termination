@@ -1,0 +1,17 @@
+killing used port number :
+
+step 1 :
+      netstat  -ano  |  findstr  <Port Number>
+ 
+ example :
+      
+      netstat -ano | findstr 8080
+      
+step 2 :
+      taskkill  /F  /PID  <Process Id>
+   
+  example : 
+  
+      taskkill /F /PID 19788
+     
+     
